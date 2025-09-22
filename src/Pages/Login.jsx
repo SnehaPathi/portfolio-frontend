@@ -8,8 +8,6 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // CORRECTED: The URL now points to the correct port (8083) and
-      // includes the backend's context path (/springapp1).
       const res = await fetch("http://localhost:8083/springapp1/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
